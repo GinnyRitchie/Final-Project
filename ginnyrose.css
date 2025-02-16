@@ -1,0 +1,293 @@
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color: goldenrod;
+}
+
+a:hover {
+    color: green ;
+    font-size: 2em;
+}
+
+#wrapper {
+    background-color: forestgreen;
+    /* min-width: 960px;
+    max-width: 2048px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    margin: 0;
+    background-color: forestgreen;
+    background-image: url(IMAGE INSERT);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    padding: 1em;
+    background-color: darkgreen;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link {
+    color: brown;
+}
+
+header a:visited {
+    color: goldenrod;
+}
+
+header a:hover {
+    color: green;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.2em;
+    text-align: center;
+    background-color: forestgreen;
+}
+
+nav a { text-decoration: none; }
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+
+h2 {
+    color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    padding: 1em;
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+    background-color: forestgreen;
+}
+
+main {
+    padding-left: 1em;
+    padding-right: 1em;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#aboutme {
+    height: 400px;
+    background-image: url(IMAGE);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+table {
+width: 200px;
+margin: auto; }
+
+caption {
+font-size: 2em;
+font-weight: bold;
+}
+
+thead {
+background-color: white;
+}
+
+tbody {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: .90em;
+}
+
+tbody td {
+border-bottom: 1px forestgreen dashed;
+padding-left: 25px;
+}
+
+tfoot {
+background-color: white;
+font-weight: bold;
+text-align: center;
+}
+
+#bodywaxing {
+    height: 400px;
+    background-image: url(IMAGE);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+#spraytans {
+    height: 400px;
+    background-image: url(IMAGE);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+#advancedfacials {
+    height: 400px;
+    background-image: url(IMAGE);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+#permaanentjewlery {
+    height: 400px;
+    background-image: url(IMAGE);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+                table {
+                    border: 1px solid blue;
+                    border-collapse: collapse;
+                    margin: auto;
+                    width: 90%;
+                }
+
+                table td, th {
+                    padding: 5px;
+                    border: 1px solid blue;
+                }
+
+                table td {
+                    text-align: center;
+                }
+
+                table tr:nth-of-type(even) {
+                    background-color: #dfedf8;
+                }
+
+                table tbody tr:hover {
+                    background-color: magenta;
+                    color: white;
+                }
+
+                .text {
+                    text-align: left;
+                }
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: 0.5em;
+}
+
+
+@media (width >= 600px) {
+    form {
+        width: 60%;
+        display: grid;
+        grid-template-columns: 10em 1fr;
+        gap: 1em;
+    }
+
+    input[type=submit] {
+        grid-column: 2/3;
+        width: 9em;
+    }
+
+
+    h1 {
+        font-size: 2em;
+        letter-spacing: 0.25em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding-right: 2em;
+    }
+
+    nav li {
+        width: 12em;
+        border-bottom: none;
+    }
+
+    section {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: inline;
+    }
+
+    #aboutme, #bodywaxing, #advancedfacials, #spraytans, #permanentjewlery {
+        background-size: 100% 100%;
+    }
+}
+
+@media (width >= 1024px) {
+    body {
+        background-image: linear-gradient(to bottom, #FFFFFF 20%, darkgreen 60%, #FFFFFF 100%);
+        background-repeat: no-repeat;
+    }
+
+    nav ul {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #wrapper {
+        width: 80%;
+        margin: auto;
+    }
+}
