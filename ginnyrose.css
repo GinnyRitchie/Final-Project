@@ -1,6 +1,6 @@
-
+/* Global styles */
 a:link {
-    color: brown;
+    color: black;
 }
 
 a:visited {
@@ -8,31 +8,31 @@ a:visited {
 }
 
 a:hover {
-    color: green ;
-    font-size: 2em;
-}
-
-#wrapper {
-    background-color: forestgreen;
-    /* min-width: 960px;
-    max-width: 2048px; */
-    margin-left: auto;
-    margin-right: auto;
+    color: brown;
+    font-weight: bold;
 }
 
 body {
     margin: 0;
-    background-color: forestgreen;
-    background-image: url(IMAGE INSERT);
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: darkgreen;
+    background-repeat: no-repeat;
+    background-image: url('./images/IMG_2641.jpeg');
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
 
+#wrapper {
+    background-color: darkgreen;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header styles */
 header {
     padding: 1em;
     background-color: darkgreen;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
 
 header a {
@@ -40,7 +40,7 @@ header a {
 }
 
 header a:link {
-    color: brown;
+    color: black;
 }
 
 header a:visited {
@@ -48,21 +48,19 @@ header a:visited {
 }
 
 header a:hover {
-    color: green;
+    color: brown;
 }
 
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-}
-
+/* Navigation styles */
 nav {
     font-size: 1.2em;
     text-align: center;
     background-color: forestgreen;
 }
 
-nav a { text-decoration: none; }
+nav a {
+    text-decoration: none;
+}
 
 nav ul {
     display: flex;
@@ -73,154 +71,138 @@ nav ul {
 }
 
 nav li {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
+    padding: 0.5em 1em;
     border-bottom: 1px solid;
 }
 
+/* Typography */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: black;
+}
+
 h2 {
-    color: darkgreen;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
 
 h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    color: black;
 }
 
+/* Footer styles */
 footer {
     padding: 1em;
-    font-size: .70em;
+    font-size: 0.70em;
     font-style: italic;
     text-align: center;
-    background-color: forestgreen;
+    background-color: darkgreen;
 }
 
+/* Main content */
 main {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
     display: block;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#aboutme {
-    height: 400px;
-    background-image: url(IMAGE);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
 }
 
 table {
-width: 200px;
-margin: auto; }
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+table td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+table td {
+    text-align: center;
+}
+
+table tr:nth-of-type(even) {
+    background-color: lightgoldenrodyellow; 
+}
+
+table tr:nth-of-type(odd) {
+    background-color: lightgray; 
+}
 
 caption {
-font-size: 2em;
-font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-thead {
-background-color: white;
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
 
-tbody {
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: .90em;
+th {
+    background-color: #f2f2f2;
+    color: darkgreen;
 }
 
 tbody td {
-border-bottom: 1px forestgreen dashed;
-padding-left: 25px;
+    padding-left: 25px;
 }
 
-tfoot {
-background-color: white;
-font-weight: bold;
-text-align: center;
+thead, tfoot {
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
-#bodywaxing {
+img {
+    display: block;
+    margin: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+video {
+    display: block; 
+    margin: auto; 
+    border: 2px solid darkgreen;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* Section-specific styling */
+#aboutme, #bodywaxing, #advancedfacials, #spraytans, #permanentjewelry {
     height: 400px;
-    background-image: url(IMAGE);
-    background-size: 200% 100%;
+    background-image: url('./images/18994.jpeg');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-#spraytans {
-    height: 400px;
-    background-image: url(IMAGE);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
+/* Mobile view */
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
 }
 
-#advancedfacials {
-    height: 400px;
-    background-image: url(IMAGE);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-}
-
-#permaanentjewlery {
-    height: 400px;
-    background-image: url(IMAGE);
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-}
-
-
-#mobile {
-    display: inline;
-}
-
-#desktop {
-    display: none;
-}
-
-                table {
-                    border: 1px solid blue;
-                    border-collapse: collapse;
-                    margin: auto;
-                    width: 90%;
-                }
-
-                table td, th {
-                    padding: 5px;
-                    border: 1px solid blue;
-                }
-
-                table td {
-                    text-align: center;
-                }
-
-                table tr:nth-of-type(even) {
-                    background-color: #dfedf8;
-                }
-
-                table tbody tr:hover {
-                    background-color: magenta;
-                    color: white;
-                }
-
-                .text {
-                    text-align: left;
-                }
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-    width: 80%;
-}
-
-input, textarea {
-    margin-bottom: 0.5em;
-}
-
-
-@media (width >= 600px) {
+/* Tablet view */
+@media (min-width: 600px) {
     form {
         width: 60%;
         display: grid;
@@ -229,10 +211,9 @@ input, textarea {
     }
 
     input[type=submit] {
-        grid-column: 2/3;
+        grid-column: 2 / 3;
         width: 9em;
     }
-
 
     h1 {
         font-size: 2em;
@@ -240,11 +221,9 @@ input, textarea {
     }
 
     nav ul {
-        display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
         justify-content: space-around;
-        padding-right: 2em;
+        padding: 0 2em;
     }
 
     nav li {
@@ -252,42 +231,15 @@ input, textarea {
         border-bottom: none;
     }
 
-    section {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    #flow {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #mobile {
-        display: none;
-    }
-
-    #desktop {
-        display: inline;
-    }
-
-    #aboutme, #bodywaxing, #advancedfacials, #spraytans, #permanentjewlery {
-        background-size: 100% 100%;
+    #wrapper {
+        width: 80%;
     }
 }
 
-@media (width >= 1024px) {
+/* Desktop view */
+@media (min-width: 1024px) {
     body {
-        background-image: linear-gradient(to bottom, #FFFFFF 20%, darkgreen 60%, #FFFFFF 100%);
-        background-repeat: no-repeat;
-    }
-
-    nav ul {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    #wrapper {
-        width: 80%;
-        margin: auto;
+        background-image: none;
+        background-color: darkgreen;
     }
 }
